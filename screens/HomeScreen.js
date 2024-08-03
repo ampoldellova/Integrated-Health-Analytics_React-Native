@@ -76,42 +76,42 @@ const HomeScreen = () => {
               <Image source={require('../assets/KMB.jpg')} style={styles.profileImages} />
               <View style={styles.container3}>
                 <Text variant='titleMedium'>Kayla Mae Baluyot</Text>
-                <Text variant='bodyMedium'>BSIT-NS-3A</Text>
+                <Text variant='bodySmall' styles={styles.description1}>BSIT-NS-3A</Text>
               </View>
             </View>
             <View style={styles.profileCards} elevation={0}>
               <Image source={require('../assets/JPSD.jpg')} style={styles.profileImages} />
               <View style={styles.container3}>
                 <Text variant='titleMedium'>John Paul Dellova</Text>
-                <Text variant='bodyMedium'>BSIT-NS-3A</Text>
+                <Text variant='bodySmall' styles={styles.description1}>BSIT-NS-3A</Text>
               </View>
             </View>
             <View style={styles.profileCards} elevation={0}>
               <Image source={require('../assets/JRM.jpg')} style={styles.profileImages} />
               <View style={styles.container3}>
                 <Text variant='titleMedium'>John Radilh Mancao</Text>
-                <Text variant='bodyMedium'>BSIT-NS-3A</Text>
+                <Text variant='bodySmall' styles={styles.description1}>BSIT-NS-3A</Text>
               </View>
             </View>
             <View style={styles.profileCards} elevation={0}>
               <Image source={require('../assets/KJO.jpg')} style={styles.profileImages} />
               <View style={styles.container3}>
                 <Text variant='titleMedium'>Karl Jaspher Odevilas</Text>
-                <Text variant='bodyMedium'>BSIT-NS-3A</Text>
+                <Text variant='bodySmall' styles={styles.description1}>BSIT-NS-3A</Text>
               </View>
             </View>
             <View style={styles.profileCards} elevation={0}>
               <Image source={require('../assets/GP.jpg')} style={styles.profileImages} />
               <View style={styles.container3}>
                 <Text variant='titleMedium'>Gerelito Puyos</Text>
-                <Text variant='bodyMedium'>BSIT-NS-3A</Text>
+                <Text variant='bodySmall' styles={styles.description1}>BSIT-NS-3A</Text>
               </View>
             </View>
             <View style={styles.profileCards} elevation={0}>
               <Image source={require('../assets/MSC.jpg')} style={styles.profileImages} />
               <View style={styles.container3}>
                 <Text variant='titleMedium'>Marice Sol Cruz</Text>
-                <Text variant='bodyMedium'>BSIT-NS-3A</Text>
+                <Text variant='bodySmall' styles={styles.description1}>BSIT-NS-3A</Text>
               </View>
             </View>
           </ScrollView>
@@ -172,6 +172,9 @@ const styles = StyleSheet.create({
   },
   description: {
     textAlign: 'justify',
+  },
+  description1: {
+    color: 'gray',
   },
   profileCards: {
     width: 150,
