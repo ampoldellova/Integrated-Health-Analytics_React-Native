@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Integrated BMI calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@latest/dist/full.css" rel="stylesheet">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.1.3/socket.io.min.js"></script>
+</head>
+<body class="bg-light" style="height:100vh">
+    <div class="px-5 py-5 d-flex justify-content-center align-items-center flex-column">
+      <div class="row">
+        <div class="col-xxl-4">
+          <h1 class="mt-5" style="font-weight:bold;">Integrated Health Analytics</h1>
+          <p style="font-weight:bold;">Group# 3</p>
+          <div class="overflow-x-auto">
+            <table class="table">
+              <tbody>
+                <!-- row 1 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-12 w-12">
+                          <img
+                            src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-1/339607119_176157701923614_7020618636849759043_n.jpg?stp=c46.0.160.160a_dst-jpg_p160x160&_nc_cat=109&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHwsES_LFFKqlU5AhZaJRHBUTN1r_lg9nJRM3Wv-WD2csaTKHVBpTd-o0bdve0BGyVH3Gf3rE6zANvhAytWDci_&_nc_ohc=dVGsPnUaSmUQ7kNvgGeQ7Qw&_nc_ht=scontent.fmnl33-6.fna&oh=00_AYDMILfPnnZ9wwWM0ib7TEICqqdz4ARIR_SiCTdkHiy5HQ&oe=66B1210A"
+                            alt="Avatar Tailwind CSS Component" />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-bold">Dellova, John Paul</div>
+                        <div class="text-sm opacity-50">BSIT-NS-3A</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- row 2 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-12 w-12">
+                          <img
+                            src="https://scontent.fmnl33-5.fna.fbcdn.net/v/t39.30808-6/307992179_2379079918906985_7831883941581346858_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=669761&_nc_eui2=AeFE_JOezSd7FljkMitC4J0mU6hztLI-4KFTqHO0sj7goTMbldLltvJ1WJxDlkqfMEW4e37SJYsNrqmo_XGcRzd0&_nc_ohc=xL2QfR6V1kAQ7kNvgEU_IJj&_nc_ht=scontent.fmnl33-5.fna&oh=00_AYA7kSw1vh3V1iH0l0drlNd6p5mLl-cw_knXilcUDwaJqA&oe=66B10FD8"
+                            alt="Avatar Tailwind CSS Component" />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-bold">Baluyot, Kayla Mae</div>
+                        <div class="text-sm opacity-50">BSIT-NS-3A</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- row 3 -->
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-12 w-12">
+                          <img
+                            src="https://scontent.fmnl33-5.fna.fbcdn.net/v/t1.15752-9/453425101_1106424121053901_1741201448118133973_n.jpg?stp=dst-jpg_p1080x2048&_nc_cat=105&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEcoAkxpTE3yHkVFXgn8gXTxLrLHmuYstnEussea5iy2WbOaHUnzgf5XdZCjffgMAbV3iB--yYtvnOsoTEulR0U&_nc_ohc=TuvaMo0fz00Q7kNvgECpiFV&_nc_ht=scontent.fmnl33-5.fna&oh=03_Q7cD1QFW5zUNwBNpxs44Zb5JAzKoxgj0zwrvagSr0x5ubz3G7A&oe=66D2AE92"
+                            alt="Avatar Tailwind CSS Component" />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-bold">Mancao, John Radilh</div>
+                        <div class="text-sm opacity-50">BSIT-NS-3A</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <!-- row 4 -->
+                
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-12 w-12">
+                          <img
+                            src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t1.15752-9/451576830_851673757025040_7590158389555979550_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeF0lcXtix9-45xZYXgzhviumrBncmpD_DCasGdyakP8MAApFrvJyorPxTSLFML9HBuLTxlU3Zo9MFf3SCLLmGV5&_nc_ohc=_pUZc19N_JkQ7kNvgGfxUS6&_nc_ht=scontent.fmnl33-6.fna&gid=AAMCpWq3nc0t3LEGzNtJnDt&oh=03_Q7cD1QH7wb9DadfmFA-dXVMg8Lev1JQiGkzKtW_1l35YVT3WgA&oe=66D2A95F"
+                            alt="Avatar Tailwind CSS Component" />
+                        </div>
+                      </div>
+                      <div>
+                        <div class="font-bold">Odevilas, Karl Jaspher</div>
+                        <div class="text-sm opacity-50">BSIT-NS-3A</div>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+  
+                <tr>
+                  <td>
+                    <div class="flex items-center gap-3">
+                      <div class="avatar">
+                        <div class="mask mask-squircle h-12 w-12">
+                          <img
+                            src="https://scontent.fmnl33-1.fna.fbcdn.net/v/t1.15752-9/450449269_510397974668557_4921597996734114334_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=9f807c&_nc_eui2=AeEiPgrcpI3aNj8yd_SWe3JYiVRn8ngSuLWJVGfyeBK4tYWicEcfvGzEi4_5aKsO993K4re9tqqFYD8mD3SprI94&_nc_ohc=u-rsjhiy3bkQ7kNvgGp_zPX&_nc_ht=scontent.fmnl33-1.fna&oh=03_Q7cD1QHUS1j5t1eppPtmw4KoS5DmY1_pxk6a5ZqW3yiGbx2P0A&oe=66D29D37"
+                            alt="Avatar Tailwind CSS Component" />
+                          </div>
+                        </div>
+                        <div>
+                          <div class="font-bold">Puyos, Gerelito</div>
+                          <div class="text-sm opacity-50">BSIT-NS-3A</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+  
+                  <tr>
+                    <td>
+                      <div class="flex items-center gap-3">
+                        <div class="avatar">
+                          <div class="mask mask-squircle h-12 w-12">
+                            <img
+                              src="https://scontent.fmnl33-6.fna.fbcdn.net/v/t39.30808-1/435154485_122156423162086967_8418476579575713343_n.jpg?stp=dst-jpg_s200x200&_nc_cat=107&ccb=1-7&_nc_sid=0ecb9b&_nc_eui2=AeHGsWxNHyW5NWyk1abHlNSzcHkEMR3ntlVweQQxHee2VWyTq9Tqp1JqW1b0BWAgwyg91dwgVnTMHSjNf9pKoX-v&_nc_ohc=OoysUkJ_I84Q7kNvgHsYvvu&_nc_ht=scontent.fmnl33-6.fna&oh=00_AYCAA3HwcT_-i6H7jCnGQmtMPkVvcpaF_NIOgpkmsbfyuw&oe=66B12E26"
+                              alt="Avatar Tailwind CSS Component" />
+                          </div>
+                        </div>
+                        <div>
+                          <div class="font-bold">Sol Cruz, Marice</div>
+                          <div class="text-sm opacity-50">BSIT-NS-3A</div>
+                        </div>
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+        </div>
+        <div class="col-xxl-8 pl-5 pt-5">
+          <div class="stats shadow">
+              <div class="stat">
+                <div class="stat-figure text-primary">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    class="inline-block h-8 w-8 stroke-current">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 5v14m0-14l-3 3m3-3l3 3m-3 8v-14m0 14l-3-3m3 3l3-3"></path>
+                  </svg>
+                </div>
+                <div class="stat-title">Height</div>
+                <div id="data-height" class="stat-value text-primary">Data</div>
+                <div class="stat-desc">Person's height in centimeters</div>
+              </div>
+            
+              <div class="stat">
+                <div class="stat-figure text-warning">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    class="inline-block h-8 w-8 stroke-current">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M6 2v6h12V2m0 14h-1.5l-1.12-2.23c-.25-.5-.8-.77-1.34-.63l-2.22.56 1.58 2.25H14l-1.58 2.25 2.22.56c.54.14 1.09-.13 1.34-.63L16.5 18H18m-12 0h1.5l1.12-2.23c.25-.5.8-.77 1.34-.63l2.22.56-1.58 2.25H10l1.58 2.25-2.22.56c-.54.14-1.09-.13-1.34-.63L7.5 18H6M6 8V6c-1.1 0-2 .9-2 2v10h16V8c0-1.1-.9-2-2-2v2"></path>
+                  </svg>
+                </div>
+                <div class="stat-title">Weight</div>
+                <div id="data-weight" class="stat-value text-warning">Data</div>
+                <div class="stat-desc">Person's weight in kilogram</div>
+              </div>
+      
+              <div class="stat">
+                  <div class="stat-figure text-success">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      class="inline-block h-8 w-8 stroke-current">
+                      <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M12 4a4 4 0 100 8 4 4 0 000-8zm0 10c-4.4 0-8 1.8-8 4v2h16v-2c0-2.2-3.6-4-8-4z"></path>
+                      </svg>
+                  </div>
+                  <div class="stat-title">BMI</div>
+                  <div id="data-bmi" class="stat-value text-success">Data</div>
+                  <div class="stat-desc">Person's Body Mass Index</div>
+                </div>
+            
+              <div class="stat">
+                <div class="stat-figure text-error">
+                      <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          fill="none"
+                          viewBox="0 0 24 24"
+                          class="inline-block h-8 w-8 stroke-current">
+                          <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                      </svg> 
+                  </div>
+                  <div class="stat-title">Pulse Rate</div>
+                <div id="data-pulse" class="stat-value text-error">Data</div>
+                <div class="stat-desc">Beats per minute</div>
+              </div>
+          </div>
+          
+          <div id="data-recommendation" class="chat-bubble" style="width:74.5%; margin-top:3%; background: #f8f9fa; color:#242424">Recommendation: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,</div>
+        </div>
+      </div>
+        
+    </div>
+    <script>
+      var socket = io();
+
+      socket.on('connect', function () {
+          console.log('Connected to the server.');
+      });
+
+      socket.on('update', function (data) {
+          console.log(data);
+          document.getElementById('data-height').textContent = data.height + ' cm';
+          document.getElementById('data-weight').textContent = data.weight + ' kg';
+          document.getElementById('data-bmi').textContent = data.bmi;
+          document.getElementById('data-pulse').textContent = data.pulse + ' bpm';
+          document.getElementById('data-recommendation').textContent = 'Recommendation: ' + data.recommendation;
+      });
+
+      socket.on('disconnect', function () {
+          console.log('Disconnected from the server.');
+      });
+
+  </script>
+</body>
+</html>

@@ -115,6 +115,7 @@ const styles = StyleSheet.create({
   mealImage: {
     width: 312,
     height: 231,
+    objectFit:'contain'
   },
 });
 

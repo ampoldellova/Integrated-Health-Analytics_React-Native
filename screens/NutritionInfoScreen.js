@@ -85,6 +85,7 @@ const styles = StyleSheet.create({
     width: 312,
     height: 231,
     marginTop: 10,
+    objectFit:'contain'
   },
 });
 
