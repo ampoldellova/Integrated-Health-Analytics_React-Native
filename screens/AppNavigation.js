@@ -27,7 +27,7 @@ const AppNavigation = () => {
                     },
                 })}
                 tabBarOptions={{
-                    activeTintColor: '#803D3B',
+                    activeTintColor: '#2196f3',
                     inactiveTintColor: 'gray',
                 }}
             >

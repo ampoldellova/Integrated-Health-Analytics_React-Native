@@ -22,7 +22,6 @@ const NutritionInfoScreen = () => {
     <View style={styles.container}>
       <Text style={styles.header}>Nutrition Info</Text>
       <View style={styles.nutritionContainer}>
-        <Text style={styles.sectionTitle}>Enter Food Item:</Text>
         <TextInput
           style={styles.input}
           placeholder="Enter food item"

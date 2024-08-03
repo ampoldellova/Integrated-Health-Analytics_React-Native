@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const SPOONACULAR_API_KEY = 'b5cd1d143f8c481894e00e13980de52b';
+const SPOONACULAR_API_KEY = '83b7dd3e05f34c638f7470f2b477c7be';
 
 const getHealthTips = async (category) => {
   let tips = '';

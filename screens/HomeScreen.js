@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from 'react';
 import { Animated, StyleSheet, Image, Easing, SafeAreaView, ScrollView, View } from 'react-native';
-import { Text, Card, Button, Avatar } from 'react-native-paper';
+import { Text } from 'react-native-paper';
 import { useIsFocused } from '@react-navigation/native';
 
 const HomeScreen = () => {
@@ -183,7 +183,9 @@ const styles = StyleSheet.create({
   profileImages: {
     width: 150,
     height: 150,
-    borderRadius: 10
+    borderRadius: 10,
+    borderWidth: 1,
+    borderColor: '#ccc',
   }
 });
 
