@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
-import { View, Text, TextInput, Button, StyleSheet, Image } from 'react-native';
+import { View, TextInput, Button, StyleSheet, Image } from 'react-native';
+import { Text } from 'react-native-paper';
 import { getNutritionInfo } from '../services/NutritionixService';
 
 const NutritionInfoScreen = () => {
@@ -20,7 +21,7 @@ const NutritionInfoScreen = () => {
 
   return (
     <View style={styles.container}>
-      <Text style={styles.header}>Nutrition Info</Text>
+      <Text variant='headlineMedium' style={styles.header}>Nutrition Info</Text>
       <View style={styles.nutritionContainer}>
         <TextInput
           style={styles.input}
@@ -38,11 +39,11 @@ const NutritionInfoScreen = () => {
                 style={styles.foodImage}
               />
             )}
-            <Text>Food: {nutritionData.foods[0]?.food_name}</Text>
-            <Text>Calories: {nutritionData.foods[0]?.nf_calories} kcal</Text>
-            <Text>Protein: {nutritionData.foods[0]?.nf_protein} g</Text>
-            <Text>Fat: {nutritionData.foods[0]?.nf_total_fat} g</Text>
-            <Text>Carbs: {nutritionData.foods[0]?.nf_total_carbohydrate} g</Text>
+            <Text variant='bodyLarge'>Food: {nutritionData.foods[0]?.food_name}</Text>
+            <Text variant='bodyLarge'>Calories: {nutritionData.foods[0]?.nf_calories}kcal</Text>
+            <Text variant='bodyLarge'>Protein: {nutritionData.foods[0]?.nf_protein}g</Text>
+            <Text variant='bodyLarge'>Carbs: {nutritionData.foods[0]?.nf_total_carbohydrate}g</Text>
+            <Text variant='bodyLarge'>Fat: {nutritionData.foods[0]?.nf_total_fat}g</Text>
           </View>
         )}
       </View>
@@ -56,13 +57,18 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     padding: 20,
   },
+  container1: {
+    flex: 1,
+    justifyContent: 'center',
+  },
   header: {
-    fontSize: 24,
+    fontSize: 32,
+    fontWeight: 'bold',
     textAlign: 'center',
-    marginBottom: 20,
+    paddingTop: '25%'
   },
   nutritionContainer: {
-    marginTop: 20,
+    marginTop: 10,
   },
   sectionTitle: {
     fontSize: 18,
@@ -71,6 +77,7 @@ const styles = StyleSheet.create({
   input: {
     borderWidth: 1,
     borderColor: '#ccc',
+    borderRadius: 10,
     padding: 10,
     marginBottom: 10,
   },
@@ -81,10 +88,13 @@ const styles = StyleSheet.create({
     color: 'red',
   },
   foodImage: {
-    width: 312,
-    height: 231,
-    marginTop: 10,
-    objectFit:'contain'
+    width: 'auto',
+    height: 300,
+    borderRadius: 10,
+    marginBottom: 10,
+    justifyContent: 'center',
+    borderWidth: 1,
+    borderColor: '#ccc'
   },
 });
 
